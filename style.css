@@ -1,0 +1,59 @@
+/* ******** VARIABLES and FONTS *****/
+
+@import url("https://use.typekit.net/nhe2jgx.css");
+@import url("https://use.typekit.net/nhe2jgx.css");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap");
+
+:root {
+  --header-font: "Shippori Mincho B1", serif;
+  --bodytext-font: "aktiv-grotesk", sans-serif;
+  --h1-weight: 700;
+  --h1-fontsize: 4.188rem;
+  --h2-weight: 600;
+  --h2-fontsize: 3.125rem;
+  --h3-weight: 500;
+  --h3-fontsize: 2.313rem;
+  --p-textsize: 1rem;
+  --big-bodytext: 1.313rem;
+  --nav-font: "aktiv-grotesk", sans-serif;
+  --nav-fontsize: 1.5rem;
+  --nav-weight: 700;
+  --btn-fontsize: 1.625rem;
+  --btn-weight: 700;
+  --btn-font: "aktiv-grotesk", sans-serif;
+  --bg-gradient: ;
+  --review-card-bg: #c0e8dd;
+  --button-border: ;
+  --footer-faq-bgcolor: #8cb8b7;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/************** Base styling********** */
+
+h1,
+h2,
+h3 {
+  font-family: var(--header-font);
+}
+p {
+  font-family: var(--bodytext-font);
+}
+h1 {
+  font-size: var(--h1-fontsize);
+  font-weight: var(--h1-weight);
+}
+h2 {
+  font-size: var(--h2-fontsize);
+  font-weight: var(--h2-weight);
+}
+h3 {
+  font-size: var(--h3-fontsize);
+  font-weight: var(--h3-weight);
+}
+main {
+  padding: 1rem;
+}
