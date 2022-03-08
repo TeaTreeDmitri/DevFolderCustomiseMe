@@ -81,8 +81,12 @@ nav a {
   font-size: var(--btn-fontsize);
   border: 2px solid black;
   border-radius: 8px;
-  padding: 1em;
+  padding: 0.75rem;
+  padding: 0.75rem;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
   text-align: center;
+  width: 12rem;
 }
 .signbutton {
   border: 2px solid black;
@@ -96,7 +100,7 @@ nav a {
 
 .buttonscontainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 1.75rem;
   gap: 1.75rem;
 }
@@ -110,9 +114,12 @@ nav a {
 .landingtext {
   padding-top: 1.75rem;
   padding: 1rem;
+  max-width: 66vw;
+  padding-left: 4.5rem;
 }
 #landingtitle {
   padding: 1rem;
+  padding-left: 4.5rem;
 }
 .landingwrap {
   background-color: var(--review-card-bg);
@@ -129,9 +136,10 @@ nav a {
   padding: 1rem;
 }
 .hiwwrap {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 1rem;
+  justify-content: space-between;
 }
 .hiwwrap h3 {
   text-align: center;
@@ -140,6 +148,7 @@ nav a {
 .hiwwrap p {
   padding-top: 1.75rem;
   padding-bottom: 0.75rem;
+  text-align: center;
 }
 .icon {
   display: flex;
@@ -148,20 +157,17 @@ nav a {
 }
 .hiwcard {
   padding-top: 3.25rem;
-  border: solid 1px var(--review-card-bg);
-  border-radius: 8px;
   padding: 1rem;
   margin: 0.5rem;
 }
 
 /* ****** SOCIAL PROOF *******' */
 .socialproof {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.75rem;
   padding-top: 2.75rem;
-  padding: 1rem;
+  padding: 2.75rem;
 }
 .socialproof h3 {
   font-weight: 700;
@@ -192,7 +198,8 @@ nav a {
 /* *****SHOPPING GRID ****** */
 .samplegrid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 .shopgrid {
   padding-top: 2.75rem;
@@ -227,32 +234,24 @@ nav a {
 }
 
 /* media queries  */
-@media only screen and (min-width: 899px) {
+
+@media only screen and (max-width: 899px) {
   .hiwwrap {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
-@media only screen and (min-width: 699px) {
   .buttonscontainer {
-    justify-content: center;
-    flex-direction: row;
-  }
-  .socialproof {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
   }
   .button {
-    width: 40vw;
-    text-align: center;
+    width: 20vw;
   }
-  .samplegrid {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-  }
+}
+@media only screen and (max-width: 799px) {
   .hiwwrap {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+  }
+  .socialproof {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -267,18 +266,14 @@ nav a {
     gap: 1rem;
   }
   .buttonscontainer {
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
   }
   .button {
     width: 50vw;
   }
-  .hiwwrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
 }
+
 @media only screen and (max-width: 599px) {
   .buttonscontainer {
     flex-direction: column;
