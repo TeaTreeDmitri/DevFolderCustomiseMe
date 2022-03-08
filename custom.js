@@ -11,7 +11,6 @@ let reviewLink = "";
 
 // cedarwood, sandalwood, bergamot, orangeSweet, rosemary, cinnamon, ginger, lavender
 
-
 // USER CLICKS INGREDIENT 1 or 2 ////////////////////////////////////////////////////////////////////
 
 document.querySelector("#cedarwood").addEventListener("click", addCedarwoodToBasket);
@@ -26,7 +25,7 @@ document.querySelector("#lavender").addEventListener("click", addLavenderToBaske
 
 function addCedarwoodToBasket() {
     document.querySelector(".customisegrid").classList.add("cedarwoodColor");
-    
+
     if (document.querySelector("#iconChoiceOne") == false) {
         document.querySelector("#iconChoiceOne").src = "cedarwood.svg";
     } else {
