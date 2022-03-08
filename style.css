@@ -3,6 +3,7 @@
 @import url("https://use.typekit.net/nhe2jgx.css");
 @import url("https://use.typekit.net/nhe2jgx.css");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap");
+@import url("https://use.typekit.net/nhe2jgx.css");
 
 :root {
   --header-font: "Shippori Mincho B1", serif;
@@ -96,6 +97,7 @@ nav a {
   font-family: var(--btn-font);
   font-weight: var(--btn-weight);
   font-size: var(--btn-fontsize);
+  z-index: 2;
 }
 
 .buttonscontainer {
@@ -107,6 +109,10 @@ nav a {
 #createbutton {
   background-color: #230a06;
   color: #ffffff;
+  z-index: 2;
+}
+#shopbutton {
+  z-index: 2;
 }
 .header {
   text-align: center;
@@ -117,17 +123,36 @@ nav a {
   max-width: 66vw;
   padding-left: 4.5rem;
 }
+.landingtext p {
+  z-index: 2;
+}
 #landingtitle {
   padding: 1rem;
   padding-left: 4.5rem;
+  z-index: 2;
 }
 .landingwrap {
   background-color: var(--review-card-bg);
+  overflow: hidden;
 }
 .stars {
   padding-top: 0.75rem;
   padding-bottom: 1.75rem;
 }
+.soaptext {
+  position: absolute;
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 250px;
+  line-height: 20vw;
+  z-index: 0;
+}
+.landingimage.bgelement {
+  z-index: -1;
+}
+
 /* *********** */
 
 /* *******HOW it works*******' */
@@ -290,4 +315,46 @@ nav a {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
+
+/* ****************PRODUCT LIST PAGE ******************** */
+
+.listlandingwrap {
+  background-color: var(--review-card-bg);
+  display: flex;
+  justify-content: space-around;
+}
+.listlandingwrap img {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.shopsection {
+  padding-top: 2.75rem;
+}
+.custombanner {
+  position: relative;
+  width: 100vw;
+  margin: auto;
+}
+.bannertitle {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  color: #fff;
+}
+.bannertext {
+  position: absolute;
+  text-align: center;
+  top: 75%;
+  left: 25%;
+  right: 25%;
+  max-width: 66ch;
+}
+.bannerbutton {
+  position: absolute;
 }
