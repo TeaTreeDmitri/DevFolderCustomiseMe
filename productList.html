@@ -11,14 +11,22 @@
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Logo</a></li>
+          <li>
+            <img
+              class="header-logo"
+              src="/svgs/logo.svg"
+              alt="CustomiseMe Logo"
+            />
+          </li>
           <li><a href="productList.html">Shop</a></li>
           <li><a href="https://customiseme.dk/about-us/">About</a></li>
           <li><a href="https://customiseme.dk/contact/">Contact</a></li>
           <li><a href="https://customiseme.dk/workshop/">Workshop</a></li>
           <li><a href="https://customiseme.dk/my-account/">Log In</a></li>
           <li>
-            <button class="navbutton">Sign Up</button>
+            <a href="https://customiseme.dk/my-account/" class="navbutton"
+              >Sign Up</a
+            >
           </li>
           <li>
             <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
@@ -38,7 +46,7 @@
           <h1 id="landingtitle">
             Shop our pre-made soaps or choose to customise your own
           </h1>
-          <img src="/svgs/soapplaceholder.jpg" alt="" />
+          <img src="/svgs/soapplaceholder.jpg" alt="picture" />
         </div>
         <!-- PRODUCT GRID ///////////////////////////////////////////////////////////////// -->
         <section class="shopsection">
@@ -51,8 +59,8 @@
                 class="itempic"
               />
               <h3 class="itemname">Olive Soap</h3>
-              <h3 class="price">35,- DKK</h3>
-              <div class="addtocart">Add to cart</div>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
             </div>
             <div class="shopitem">
               <img
@@ -61,8 +69,8 @@
                 class="itempic"
               />
               <h3 class="itemname">Olive Soap</h3>
-              <h3 class="price">35,- DKK</h3>
-              <div class="addtocart">Add to cart</div>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
             </div>
             <div class="shopitem">
               <img
@@ -71,8 +79,8 @@
                 class="itempic"
               />
               <h3 class="itemname">Olive Soap</h3>
-              <h3 class="price">35,- DKK</h3>
-              <div class="addtocart">Add to cart</div>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
             </div>
             <div class="shopitem">
               <img
@@ -81,8 +89,8 @@
                 class="itempic"
               />
               <h3 class="itemname">Olive Soap</h3>
-              <h3 class="price">35,- DKK</h3>
-              <div class="addtocart">Add to cart</div>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
             </div>
             <div class="shopitem">
               <img
@@ -91,8 +99,8 @@
                 class="itempic"
               />
               <h3 class="itemname">Olive Soap</h3>
-              <h3 class="price">35,- DKK</h3>
-              <div class="addtocart">Add to cart</div>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
             </div>
             <div class="shopitem">
               <img
@@ -101,41 +109,34 @@
                 class="itempic"
               />
               <h3 class="itemname">Olive Soap</h3>
-              <h3 class="price">35,- DKK</h3>
-              <div class="addtocart">Add to cart</div>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
             </div>
           </div>
         </section>
         <!-- CUSTOMISE CTA ///////////////////////////////////////// -->
         <div class="custombanner">
-          <img
-            class="bannerphoto"
-            src="/svgs/banner-1.jpg"
-            alt="banner photo"
-          />
           <h2 class="bannertitle">Feel like making your own?</h2>
           <p class="bannertext">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae alias
             voluptate reiciendis blanditiis quidem non tempora fuga ut ad,
             dolorum excepturi molestiae, modi quasi exercitationem, aliquam.
           </p>
-          <div class="bannerbutton button" id="createbutton">
-            CREATE YOUR OWN SOAP
-          </div>
+          <a class="bannerbutton" id="createbutton"> CREATE YOUR OWN SOAP </a>
         </div>
       </div>
     </main>
     <footer>
-      <div>
-        <img src="" alt="Logo" />
-      </div>
-
-      <div class="secondfooterdiv">
-        <div class="logodescription">
-          <p>Co-creating with your request, needs and wishes in mind</p>
+      <div class="footer-grid">
+        <div class="secondfooterdiv">
+          <figure>
+            <img src="/svgs/logo.svg" alt="CustomiseMe Logo" />
+            <figcaption class="logodescription">
+              Co-creating with your request, needs and wishes in mind
+            </figcaption>
+          </figure>
         </div>
-
-        <div>
+        <div class="footer-nav-flex">
           <nav>
             <ul class="footernav">
               <li><a href="Customise.html">Create your soap</a></li>
@@ -145,20 +146,11 @@
               <li><a href="https://customiseme.dk/workshop/">Workshop</a></li>
               <li><a href="https://customiseme.dk/my-account/">Log In</a></li>
               <li>
-                <button class="navbutton">Sign Up</button>
-              </li>
-              <li>
-                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M17,18A2,2 0 0,1 19,20A2,2 0 0,1 17,22C15.89,22 15,21.1 15,20C15,18.89 15.89,18 17,18M1,2H4.27L5.21,4H20A1,1 0 0,1 21,5C21,5.17 20.95,5.34 20.88,5.5L17.3,11.97C16.96,12.58 16.3,13 15.55,13H8.1L7.2,14.63L7.17,14.75A0.25,0.25 0 0,0 7.42,15H19V17H7C5.89,17 5,16.1 5,15C5,14.65 5.09,14.32 5.24,14.04L6.6,11.59L3,4H1V2M7,18A2,2 0 0,1 9,20A2,2 0 0,1 7,22C5.89,22 5,21.1 5,20C5,18.89 5.89,18 7,18M16,11L18.78,6H6.14L8.5,11H16Z"
-                  />
-                </svg>
+                <a href="https://customiseme.dk/my-account/">Sign Up</a>
               </li>
             </ul>
           </nav>
         </div>
-
         <div class="contactinfo">
           <h3>CustomiseMe Aps</h3>
           <ul class="contactlist">

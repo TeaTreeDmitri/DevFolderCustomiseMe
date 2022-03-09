@@ -14,10 +14,12 @@
   --h2-fontsize: 2rem;
   --h3-weight: 500;
   --h3-fontsize: 1.5rem;
+  --h4-fontsize: 1.125rem;
+  --h4-weight: 500;
   --p-textsize: 1rem;
   --big-bodytext: 1.5rem;
   --nav-font: "aktiv-grotesk", sans-serif;
-  --nav-fontsize: 1.5rem;
+  --nav-fontsize: 1.125rem;
   --nav-weight: 700;
   --btn-fontsize: 1.125rem;
   --btn-weight: 700;
@@ -27,6 +29,9 @@
   --button-border: ;
   --footer-faq-bgcolor: #8cb8b7;
   --content-padding: 1rem;
+}
+html {
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
@@ -39,16 +44,79 @@ img {
 }
 a {
   text-decoration: none;
-  color: #8cb8b7;
+  color: #000000;
 }
 a:hover {
   cursor: pointer;
 }
+
+/* *******HEADER********* */
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+ul {
+  margin: 0;
+}
+header {
+  padding: 2rem;
+  background-color: var(--review-card-bg);
+}
+ul a {
+  text-decoration: none;
+}
+.header-logo {
+  display: inline;
+  width: 5rem;
+}
+.navbutton {
+  border: 2px solid white;
+  border-radius: 0%;
+  padding: 0.75em;
+  background-color: transparent;
+  font-family: var(--nav-font);
+}
+
+li:first-child {
+  margin-right: auto;
+}
+/* animate the :after element's width from 0 to 100%  */
+header nav li a {
+  position: relative;
+  display: block;
+}
+header nav li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: -10%;
+}
+header nav li a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: 0.3s;
+}
+.navbutton a:hover::after {
+  width: 100%;
+  height: 0px;
+  background-color: #000;
+  transition: 0.3s;
+}
+
 /************** Base styling********** */
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--header-font);
 }
 p {
@@ -67,6 +135,10 @@ h3 {
   font-size: var(--h3-fontsize);
   font-weight: var(--h3-weight);
 }
+h4 {
+  font-size: var(--h4-fontsize);
+  font-weight: var(--h4-weight);
+}
 
 body {
   overflow-x: hidden;
@@ -82,7 +154,6 @@ nav a {
   font-size: var(--btn-fontsize);
   border: 2px solid black;
   border-radius: 8px;
-  padding: 0.75rem;
   padding: 0.75rem;
   padding-bottom: 0.25rem;
   padding-top: 0.25rem;
@@ -106,10 +177,26 @@ nav a {
   padding-top: 1.75rem;
   gap: 1.75rem;
 }
+
 #createbutton {
-  background-color: #230a06;
-  color: #ffffff;
-  z-index: 2;
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
+  transition: all 0.35s ease;
+  color: #000;
+  border: 3px solid #000;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 8px;
+}
+#createbutton:hover {
+  color: #fff;
+  background-color: #000;
 }
 #shopbutton {
   z-index: 2;
@@ -122,18 +209,15 @@ nav a {
   padding: 1rem;
   max-width: 66vw;
   padding-left: 4.5rem;
+  max-width: 50ch;
 }
 .landingtext p {
   z-index: 2;
 }
 #landingtitle {
-  padding: 1rem;
+  padding-top: 2.75rem;
   padding-left: 4.5rem;
   z-index: 2;
-}
-.landingwrap {
-  background-color: var(--review-card-bg);
-  overflow: hidden;
 }
 .stars {
   padding-top: 0.75rem;
@@ -246,21 +330,134 @@ nav a {
 }
 .itemname {
   padding-top: 1rem;
+  padding-bottom: 1.75rem;
 }
 .price {
   padding-top: 1.5rem;
   padding-bottom: 1.25rem;
 }
 .addtocart {
-  border: solid 2px #000000;
-  padding: 1rem;
-  border-radius: 8px;
-  display: flex;
-  color: #000000;
-  justify-content: center;
   font-family: var(--btn-font);
-  font-size: var(--btn-fontsize);
   font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
+  transition: all 0.35s ease;
+  color: #fff;
+  border: 3px solid #000;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  background-color: #000;
+  padding: 1rem;
+  outline: none;
+  border-radius: 8px;
+}
+.addtocart:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+/* ****************PRODUCT LIST PAGE ******************** */
+
+.listlandingwrap {
+  background: linear-gradient(0deg, #8cb8b7, #c0e8dd 60%);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.listlandingwrap img {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.shopsection {
+  padding-top: 2.75rem;
+}
+.custombanner {
+  background-image: url(/svgs/bannerimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.bannertitle {
+  text-align: center;
+  color: #000;
+}
+.bannertext {
+  padding-top: 1.75rem;
+  padding-bottom: 2.75rem;
+  text-align: center;
+  max-width: 50%;
+  color: #000;
+}
+.bannerbutton {
+  text-align: center;
+}
+
+/* ***********FOOTER*********** */
+
+footer {
+  /*  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 5rem; */
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 2.75rem;
+  padding-bottom: 1.75rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.secondfooterdiv {
+  justify-self: center;
+  display: flex;
+  gap: 2rem;
+}
+.secondfooterdiv img {
+  width: 15vw;
+}
+.logodescription {
+  max-width: 26ch;
+}
+.footer-nav-flex {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+}
+
+.footernav {
+  list-style: none;
+}
+
+.footernav li {
+  padding-top: 0.7rem;
+}
+
+.contactlist li {
+  list-style: none;
+  padding: 0.25rem;
+}
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-self: center;
+}
+
+.copyright {
+  opacity: 0.7;
+  font-size: 0.6rem;
+  text-align: center;
+  padding-top: 5rem;
 }
 
 /* media queries  */
@@ -282,6 +479,35 @@ nav a {
   }
   .socialproof {
     grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.75rem;
+  }
+  .secondfooterdiv {
+    justify-content: center;
+    max-width: 100%;
+    text-align: center;
+  }
+  .secondfooterdiv img {
+    width: 33.3vw;
+  }
+  figcaption {
+    font-weight: 600;
+  }
+  .footer-nav-flex {
+    justify-content: center;
+  }
+  .listlandingwrap {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .listlandingwrap img {
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
   }
 }
 
@@ -320,46 +546,8 @@ nav a {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-}
-
-/* ****************PRODUCT LIST PAGE ******************** */
-
-.listlandingwrap {
-  background-color: var(--review-card-bg);
-  display: flex;
-  justify-content: space-around;
-}
-.listlandingwrap img {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.shopsection {
-  padding-top: 2.75rem;
-}
-.custombanner {
-  position: relative;
-  width: 100vw;
-  margin: auto;
-}
-.bannertitle {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 25%;
-  right: 25%;
-  color: #fff;
-}
-.bannertext {
-  position: absolute;
-  text-align: center;
-  top: 75%;
-  left: 25%;
-  right: 25%;
-  max-width: 66ch;
-}
-.bannerbutton {
-  position: absolute;
+  #createbutton {
+    background-color: #000;
+    color: #fff;
+  }
 }
