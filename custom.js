@@ -129,11 +129,9 @@ function addLavenderToBasket() {
     if (document.querySelector("#iconChoiceOne") == true) {
         document.querySelector("#iconChoiceOne").src = "lavender.svg";
         document.querySelector(".confirmChoice").href += "ingredient1=lavender";
-
     } else {
         document.querySelector("#iconChoiceTwo").src = "lavender.svg";
         document.querySelector(".confirmChoice").href += "&ingredient2=lavender";
-
     }
 }
 

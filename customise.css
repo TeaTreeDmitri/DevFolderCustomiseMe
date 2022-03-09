@@ -1,0 +1,24 @@
+.customiseoptionsgrid {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 2;
+    width: 80%;
+    margin: auto;
+}
+
+.customiseitem {
+    width: 80px;
+    height: 80px;
+    border: solid black 1px;
+    grid-auto-flow:row;
+}
+
+#cedarwood {
+    background-image: url(../Icons/cedarwood.svg);
+    background-size: contain;
+}
+
+#sandalwood {
+    background-image: url(../Icons/sandalwood.svg);
+    background-size: contain;
+}
