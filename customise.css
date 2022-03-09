@@ -1,24 +1,183 @@
-.customiseoptionsgrid {
+/* ingredients customise sections ////////////////////////////////////////////////// */
+
+.customiseingredientsgrid {
     display: grid;
-    grid-template-columns: 4;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 80%;
     margin: auto;
 }
 
-.customiseitem {
-    width: 80px;
-    height: 80px;
+.customiseingredient {
+    width: 100px;
+    height: 100px;
     border: solid black 1px;
-    grid-auto-flow:row;
+}
+
+.customiseingredient:hover {
+    cursor: pointer;
 }
 
 #cedarwood {
-    background-image: url(../Icons/cedarwood.svg);
-    background-size: contain;
+    background-image: url(./icons/cedarwood.svg);
+    background-size: cover;
 }
 
 #sandalwood {
-    background-image: url(../Icons/sandalwood.svg);
-    background-size: contain;
+    background-image: url(./icons/sandalwood.svg);
+    background-size: cover;
+}
+
+#bergamot {
+    background-image: url(./icons/bergamot.svg);
+    background-size: cover;
+}
+
+#orangeSweet {
+    background-image: url(./icons/orange.svg);
+    background-size: cover;
+}
+
+#rosemary {
+    background-image: url(./icons/rosemary.svg);
+    background-size: cover;
+}
+
+#cinnamon {
+    background-image: url(./icons/cinnamon.svg);
+    background-size: cover;
+}
+
+#ginger {
+    background-image: url(./icons/ginger.svg);
+    background-size: cover;
+}
+
+#lavender {
+    background-image: url(./icons/lavender.svg);
+    background-size: cover;
+}
+
+/* color customise section ///////////////////////////////////////////////////////////   */
+
+.customisecolorsgrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+}
+
+.customisecolor {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.customisecolor:hover {
+    cursor: pointer;
+}
+
+#arcticWhite {
+    background-color: antiquewhite;
+}
+
+#black {
+    background-color: darkgray;
+}
+
+#candyPink {
+    background-color: hotpink;
+}
+
+#lightBlue {
+    background-color: aqua;
+}   
+
+#purplePassion {
+    background-color: purple;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#redIron {
+    background-color: brown;
+}
+
+#ultramarine {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+
+
+/* customise shape ///////////////////////////////////////////////////////////////////// */
+
+.customiseshapegrid {
+    width: 50%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.customiseshape {
+    width: 100px;
+    height: 100px;
+}
+
+#heart {
+    background-image: url(/icons/heartbutton.svg);
+    background-size: cover;
+}
+
+#square {
+    background-image: url(/icons/squarebutton.svg);
+    background-size: cover;
+
+}
+
+#round {
+    background-image: url(/icons/roundbutton.svg);
+    background-size: cover;
+}
+
+/* customise soap display //////////////////////////////////////////////////////////// */
+
+.choicePanel {
+    width: 50%;
+    height: 110px;
+    border: solid black 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.choiceIcon {
+    border: solid 1px black;
+    width: 100px;
+}
+
+#iconChoiceOne {
+    height: 100%;
+    width: 100%;
+}
+
+#iconChoiceTwo {
+    height: 100%;
+    width: 100%;
+}
+
+#soapbox {
+    width: 30%;
+    height: 200px;
+    border: solid black 1px;
+}
+
+.customisesoap {
+    width: 100%;
 }
