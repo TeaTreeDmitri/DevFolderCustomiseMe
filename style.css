@@ -225,15 +225,17 @@ nav a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  padding: 2.75rem;
 }
 .shopgrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  padding-top: 2.75rem;
   padding: 2.75rem;
 }
-
+.shopsection h2 {
+  text-align: center;
+}
 .shopitem {
   display: flex;
   flex-direction: column;
@@ -254,6 +256,7 @@ nav a {
   padding: 1rem;
   border-radius: 8px;
   display: flex;
+  color: #000000;
   justify-content: center;
   font-family: var(--btn-font);
   font-size: var(--btn-fontsize);
