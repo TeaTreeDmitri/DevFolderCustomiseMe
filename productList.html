@@ -10,7 +10,7 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="row-header">
           <li>
             <img
               class="header-logo"
@@ -38,6 +38,58 @@
           </li>
         </ul>
       </nav>
+
+      <!-- ////////////// BURGER MENU //////////////////  -->
+      <div class="burgerMenu">
+        <div class="burgerMenuItems">
+          <ul>
+            <li>
+              <img
+                class="header-logo"
+                src="/svgs/logo.svg"
+                alt="CustomiseMe Logo"
+              />
+            </li>
+            <li>
+              <a href="#" target="_blank" class="burgerHeaderText"
+                >Create your own soap</a
+              >
+            </li>
+            <li>
+              <a href="productList.html">Shop</a>
+            </li>
+            <li>
+              <a
+                href="https://customiseme.dk/about-us/"
+                class="burgerHeaderText"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a href="https://customiseme.dk/contact/" class="burgerHeaderText"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://customiseme.dk/workshop/"
+                class="burgerHeaderText"
+                >Workshop</a
+              >
+            </li>
+            <li>
+              <a href="https://customiseme.dk/cart/" class="burgerHeaderText"
+                >Cart</a
+              >
+            </li>
+          </ul>
+          <div class="burgermenuButtons">
+            <a id="loginbutton">Log in</a>
+            <a id="signupbutton">Sign up</a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
     </header>
     <main>
       <div class="productlistgrid">
@@ -46,12 +98,34 @@
           <h1 id="landingtitle">
             Shop our pre-made soaps or choose to customise your own
           </h1>
-          <img src="/svgs/soapplaceholder.jpg" alt="picture" />
+          <figure>
+            <img src="/svgs/customisebanner.jpg" alt="CustomiseMe soap" />
+          </figure>
         </div>
         <!-- PRODUCT GRID ///////////////////////////////////////////////////////////////// -->
         <section class="shopsection">
           <h2 class="header">Shop our premade soaps</h2>
           <div class="shopgrid">
+            <div class="shopitem">
+              <img
+                src="/svgs/soapplaceholder.jpg"
+                alt="picture of product"
+                class="itempic"
+              />
+              <h3 class="itemname">Olive Soap</h3>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
+            </div>
+            <div class="shopitem">
+              <img
+                src="/svgs/soapplaceholder.jpg"
+                alt="picture of product"
+                class="itempic"
+              />
+              <h3 class="itemname">Olive Soap</h3>
+              <h4 class="price">35,- DKK</h4>
+              <a class="addtocart" href="#">Add to cart</a>
+            </div>
             <div class="shopitem">
               <img
                 src="/svgs/soapplaceholder.jpg"
