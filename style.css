@@ -71,14 +71,14 @@ a:hover {
   list-style-type: none;
   padding-top: 1rem;
 }
-/* .overlay {
+.overlay {
   height: 100vh;
   width: 100vw;
   background-color: white;
   opacity: 80%;
   position: absolute;
   z-index: 4;
-} */
+}
 .burgermenuButtons {
   display: flex;
   flex-direction: column;
@@ -540,7 +540,7 @@ footer {
     background-size: contain;
     height: 4%;
     width: 4%;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 90%;
     color: black;
     z-index: 100;
@@ -554,7 +554,7 @@ footer {
     display: none;
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 799px) {
+@media only screen and (min-width: 300px) and (max-width: 799px) {
   /* .header 
   /* Becomes HAMBURGER */
   .row-header {
@@ -565,10 +565,10 @@ footer {
     position: fixed;
     background-image: url(/svgs/burgermenu.svg);
     background-size: contain;
-    height: 9%;
-    width: 9%;
-    margin-top: 5%;
-    margin-left: 90%;
+    height: 7.5%;
+    width: 7.5%;
+    margin-top: 2%;
+    margin-left: 85%;
     color: black;
     z-index: 100;
     background-repeat: no-repeat;
@@ -633,6 +633,9 @@ footer {
   }
   .button {
     width: 50vw;
+  }
+  .burgerMenu {
+    margin-left: 82%;
   }
 }
 
