@@ -294,7 +294,7 @@ nav a {
   text-align: center;
 }
 .landingwrap {
-  background-image: url(/svgs/landingpagetextimg.jpg);
+  background-image: url(svgs/landingpagetextimg.jpg);
   height: 100vh;
   background-size: cover;
 
@@ -473,7 +473,7 @@ nav a {
   padding-top: 2.75rem;
 }
 .custombanner {
-  background-image: url(/svgs/bannerimg.jpg);
+  background-image: url(svgs/bannerimg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 100vw;
