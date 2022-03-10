@@ -4,6 +4,7 @@
 @import url("https://use.typekit.net/nhe2jgx.css");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap");
 @import url("https://use.typekit.net/nhe2jgx.css");
+@import url("https://use.typekit.net/nhe2jgx.css");
 
 :root {
   --header-font: "Shippori Mincho B1", serif;
@@ -141,8 +142,7 @@ ul {
   margin: 0;
 }
 header {
-  padding: 2rem;
-  background-color: var(--review-card-bg);
+  padding: 0.75rem;
 }
 ul a {
   text-decoration: none;
@@ -261,40 +261,61 @@ nav a {
   font-weight: var(--btn-weight);
   font-size: var(--btn-fontsize);
   transition: all 0.35s ease;
-  color: #000;
+  color: #fff;
   border: 3px solid #000;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
   text-align: center;
   line-height: 1;
-  background-color: transparent;
-  padding: 10px;
+  background-color: black;
+  padding: 1rem;
   outline: none;
   border-radius: 8px;
+  width: 26vw;
 }
 #createbutton:hover {
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
 }
 #shopbutton {
+  transition: all 0.35s ease;
+  background-color: white;
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
   z-index: 2;
+  width: 26vw;
+  line-height: 1;
+  padding: 0.75rem;
+}
+#shopbutton:hover {
+  background-color: #000;
+  color: #fff;
 }
 .header {
   text-align: center;
 }
+.landingwrap {
+  background-image: url(/svgs/landingpagetextimg.jpg);
+  height: 100vh;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
 .landingtext {
   padding-top: 1.75rem;
   padding: 1rem;
-  max-width: 66vw;
+  max-width: 66ch;
   padding-left: 4.5rem;
-  max-width: 50ch;
+  max-width: 66vw;
 }
 .landingtext p {
+  width: 66ch;
+  max-width: 66vw;
   z-index: 2;
 }
 #landingtitle {
-  padding-top: 2.75rem;
+  padding-top: 10vw;
   padding-left: 4.5rem;
+  max-width: 66ch;
   z-index: 2;
 }
 .stars {
@@ -324,7 +345,7 @@ nav a {
 }
 .hiwwrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1rem;
   justify-content: space-between;
 }
@@ -421,7 +442,6 @@ nav a {
   transition: all 0.35s ease;
   color: #fff;
   border: 3px solid #000;
-  font-family: "Montserrat", sans-serif;
   text-align: center;
   line-height: 1;
   background-color: #000;
@@ -587,18 +607,16 @@ footer {
 }
 @media only screen and (max-width: 899px) {
   .hiwwrap {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .buttonscontainer {
-    justify-content: flex-start;
-  }
+
   .button {
     width: 20vw;
   }
 }
 @media only screen and (max-width: 799px) {
   .hiwwrap {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .socialproof {
     grid-template-columns: 1fr;
@@ -634,14 +652,22 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+  .buttonscontainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #createbutton {
+    width: 80vw;
+  }
+  #shopbutton {
+    width: 80vw;
+  }
+
   .samplegrid {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
-  .buttonscontainer {
-    flex-direction: column;
-    justify-content: space-around;
-  }
+
   .button {
     width: 50vw;
   }
@@ -651,10 +677,6 @@ footer {
 }
 
 @media only screen and (max-width: 599px) {
-  .buttonscontainer {
-    flex-direction: column;
-    justify-content: center;
-  }
   .button {
     width: 100vw;
   }
@@ -665,6 +687,22 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .landingtext {
+    padding: 1.75rem;
+  }
+  .sectionheader {
+    text-align: center;
+    padding: 1rem;
+  }
+  .buttonscontainer {
+    padding-top: 10rem;
+    justify-content: center;
+  }
+  #landingtitle {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-top: 4.5rem;
   }
   #createbutton {
     background-color: #000;
