@@ -13,36 +13,34 @@
       <div class="customisegrid">
         <h2 class="customisetitle">Choose Ingredients</h2>
         <p class="customisedescript">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-          facere est, error nesciunt voluptatem, provident culpa rem tenetur sit
-          beatae inventore asperiores amet? Assumenda, iste? Officia temporibus
-          consectetur numquam eius? Repellat aut nihil, quibusdam id iusto fugit
-          quae fuga distinctio. Possimus, neque! Repellendus nesciunt corporis
-          est natus, neque aliquid aperiam rem asperiores, totam tempora
-          similique nisi unde illum eaque explicabo?
+         Our soaps are vegan, handmade, packaged in upcycled packaging such as newspapers. We're all learning how individual powerful checmicals are with skin care, so where better to start your journey to the perfect skincare routine that a base soap you can trust. Our soaps contain a base of: <br>  Coconut oil* (Cocos Nucifera oil), Olive oil* (Olea Europaea oil), Shea butter* (Butyrospermum Parkii) and Distilled water. 
         </p>
         <!-- INGREDIENTS/////////////////////////////////////////////////////////// -->
 
         <div class="customiseingredientsgrid">
-          <div class="customiseingredient" id="cedarwood"></div>
-          <div class="customiseingredient" id="sandalwood"></div>
-          <div class="customiseingredient" id="bergamot"></div>
-          <div class="customiseingredient" id="orangeSweet"></div>
-          <div class="customiseingredient" id="rosemary"></div>
-          <div class="customiseingredient" id="cinnamon"></div>
-          <div class="customiseingredient" id="ginger"></div>
-          <div class="customiseingredient" id="lavender"></div>
-        </div>
+          <div class="customiseingredient" id="cedarwood"><div class="hoverInfo"><h3>Cedarwood</h3><p>Anti-inflammatory, antiseborrheic, antiseptic, depurative, pectoral, regenerative, restorative and tonic.</p></div></div>
+          <div class="customiseingredient" id="sandalwood"><div class="hoverInfo"><h3>Sandalwood</h3><p>Has a harmonizing and calming effect which reduces tension and confusion and is ideal for use in depression, hectic daily lifestyles and states of fear, stress, nervous exhaustion, chronic illness and anxiety.</p></div></div>
+          <div class="customiseingredient" id="bergamot"><div class="hoverInfo"><h3>Bergamot</h3><p>It can be used in the treatment of depression, stress, tension, fear, hysteria, infection (all types including skin), anorexia, psoriasis, eczema and general convalescenc.</p></div></div>
+          <div class="customiseingredient" id="orangeSweet"><div class="hoverInfo"><h3>Orange</h3><p>It is a sunny and radiant oil, bringing happiness and warmth to the mind and helps people to relax and helps children to sleep at night. It can be used effectively on the immune system, as well as for colds and flu and to eliminate toxins from the body.</p></div></div>
+          <div class="customiseingredient" id="rosemary"><div class="hoverInfo"><h3>Rosemary</h3><p>It has a pronounced action on the brain and the central nervous system and is wonderful for clearing the mind and mental awareness, while having excellent brain stimulant properties, as well as improving memory.</p></div></div>
+          <div class="customiseingredient" id="cinnamon"><div class="hoverInfo"><h3>Cinnamon</h3><p>Can be used for infection of the respiratory tract, rheumatism, arthritis and general pains. It calms an exhausted feeling of depression, tones the whole body and stimulates the glandular system, thus easing period pains.</p></div></div>
+          <div class="customiseingredient" id="ginger"><div class="hoverInfo"><h3>Ginger</h3><p>Ginger oil is well suited to help ease colds and flu, nausea, motion sickness, morning sickness, muscle aches and pains, as well as poor circulation and arthritic pain.</p></div></div>
+          <div class="customiseingredient" id="lavender"><div class="hoverInfo"><h3>Lavender</h3><p>Has a soothing and calming effect on the nerves, relieving tension, depression, panic, hysteria and nervous exhaustion in general and is effective for headaches, migraines and insomnia.</p></div></div>
+          <button type="button" id="confirmingredients">Next, let's choose a shape!</button>       
+         </div>
 
-          <h2>Choose Shape</h2>
+          
           <div class="customiseshapegrid">
+            <h2 class="shapetitle">Choose Shape</h2>
             <div class="customiseshape"id="heart"></div>
             <div class="customiseshape"id="square"></div>
             <div class="customiseshape"id="round"></div>
+            <button type="button" id="confirmingshape">Next, let's choose a colour!</button>       
+
           </div>
                   <!-- COLOURS ///////////////////////////////////////////////////////////// -->
-                  <h2>Choose Colours</h2>
                   <div class="customisecolorsgrid">
+                    <h2 id="colourTitle">Choose Colours</h2>
                     <div class="customisecolor" id="arcticWhite"></div>
                     <div class="customisecolor" id="black"></div>
                     <div class="customisecolor" id="candyPink"></div>
@@ -52,16 +50,21 @@
                     <div class="customisecolor" id="redIron"></div>
                     <div class="customisecolor" id="ultramarine"></div>
                     <div class="customisecolor" id="yellow"></div>
+                    <a href="present.html?" class="button confirmChoice">CONFIRM MY CHOICES</a>
                   </div>
         </div>
       </div>
-      <h2>Your Choice</h2>
+      <!-- SOOOOOOOAAAAAAAAPPPPP PICTURE ////////////////////////////////////////////////////////// -->
+      <div id="soapbox"><img class="customiseSoap" src="/productphoto/round-white.png" alt=""></div>
       <div class="choicePanel">
-        <div class="choiceIcon"><img id="iconChoiceOne" src="/icons/off.png" alt=""/></div>
-        <div class="choiceIcon"><img id="iconChoiceTwo" src="/icons/off.png" alt=""/></div>
+        <h2>Your Choice</h2>
+        <div class="choiceIcon" id="iconDisplayOne">
+        </div>
+        <div id="iconPlaceholderOne"></div>
+        <div class="choiceIcon" id="iconDisplayTwo">
+        </div>
+        <div id="iconPlaceholderTwo"></div>
       </div>
-      <a href="present.html?" class="button confirmChoice">CONFIRM MY CHOICES</a>
-      <div id="soapbox"><img class="customiseSoap" src="/productphoto/heart-black.png" alt=""></div>
       <div class="customisechosen"></div>
       <div class="customisecolours">
     </main>

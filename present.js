@@ -9,21 +9,23 @@ colorBackground();
 
 function presentSoap() {
     document.querySelector("#presentImg").src = `/productphoto/${shape}-${color}.png`;
+    document.querySelector("#ingredientDisplayItemA").style.backgroundImage = `url(/icons/${ingredient1}.svg)`;
+    document.querySelector("#ingredientDisplayItemB").style.backgroundImage = `url(/icons/${ingredient2}.svg)`;
 }
 
 function colorBackground() {
-    document.querySelector("#bgColor").style.backgroundColor = color;
+    document.querySelector("#bgColor").style.background = `linear-gradient(to top left, ${color}, white)`;
+    document.querySelector("h6").style.color = color;
 }
 
 
 function getName() {
-    const val = document.querySelector("#soapname").value;
-    console.log(val);
-    document.querySelector("#jeffWord").textContent = val.repeat(500);
+    const name = document.querySelector("#soapName").value;
+    document.querySelector("#jeffWord").textContent = name.repeat(500);
   }
 
 
-document.querySelector("#soapname").addEventListener("keypress", getName)
+document.querySelector("#soapName").addEventListener("keypress", getName)
 
 
 
