@@ -1,4 +1,8 @@
+@import url(/style.css);
+
 /* ingredients customise sections ////////////////////////////////////////////////// */
+
+
 
 .customiseingredientsgrid {
     display: grid;
@@ -131,6 +135,10 @@
     height: 100px;
 }
 
+.customiseshape:hover {
+    cursor: pointer;
+}
+
 #heart {
     background-image: url(/icons/heartbutton.svg);
     background-size: cover;
@@ -178,6 +186,6 @@
     border: solid black 1px;
 }
 
-.customisesoap {
+.customiseSoap {
     width: 100%;
 }

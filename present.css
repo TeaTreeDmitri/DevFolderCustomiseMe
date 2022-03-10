@@ -1,0 +1,49 @@
+
+  @import url("https://use.typekit.net/omy3uju.css");
+
+* {
+    margin: 0;
+}
+
+h6 {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 200px;
+    color: black;
+    transform: translate(10%, -20%);
+    line-height: 150px;
+}
+
+
+main {
+    margin: 0;
+    z-index: -2;
+}
+
+.presentgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 20px;
+}
+
+.presentsoap {
+    height: 500px;
+    border: solid 1px black;
+}
+
+#presentImg {
+    height: 90%;
+}
+
+#jeffContainer {
+    height: 210vh;
+    width: 120vw;
+    overflow: hidden;
+    z-index: 0;
+    position: absolute;
+    transform-origin: 40vh 55vw;
+    transform: rotate(-45deg);
+}

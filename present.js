@@ -1,14 +1,29 @@
 const urlParams = new URLSearchParams(window.location.search);
-
-const ingredienta = urlParams.get("ingredienta")
-const ingredientb= urlParams.get("ingredientb")
-const color = urlParams.get("color");
+const ingredient1 = urlParams.get("ingredient1");
+const ingredient2 = urlParams.get("ingredient2");
 const shape = urlParams.get("shape");
+const color = urlParams.get("color");
 
-function getReview() {
-    document.querySelector("#presentIMG").src = color;
-    document.querySelector("#presentIMG").src += shape;
-    document.querySelector("#ingredientDisplayItemA").src = ingredienta;
-    document.querySelector("#ingredientDisplayItemB").src = ingredientb;
+presentSoap();
+colorBackground();
+
+function presentSoap() {
+    document.querySelector("#presentImg").src = `/productphoto/${shape}-${color}.png`;
 }
+
+function colorBackground() {
+    document.querySelector("#bgColor").style.backgroundColor = color;
+}
+
+
+function getName() {
+    const val = document.querySelector("#soapname").value;
+    console.log(val);
+    document.querySelector("#jeffWord").textContent = val.repeat(500);
+  }
+
+
+document.querySelector("#soapname").addEventListener("keypress", getName)
+
+
 
