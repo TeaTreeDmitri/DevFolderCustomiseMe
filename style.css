@@ -82,7 +82,7 @@ a:hover {
   width: 100vw;
   background-color: white;
   opacity: 80%;
-  position: absolute;
+  position: fixed;
   z-index: 4;
 }
 .burgermenuButtons {
@@ -538,6 +538,11 @@ footer {
 }
 
 /* media queries  */
+@media only screen and (min-width: 980px) {
+  .overlay {
+    display: none;
+  }
+}
 @media only screen and (max-width: 980px) {
   .burgerMenu {
     display: block;
@@ -556,14 +561,14 @@ footer {
 @media only screen and (min-width: 800px) and (max-width: 980px) {
   /* .header 
   /* Becomes HAMBURGER */
-  .row-header {
+  header {
     display: none;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 799px) {
   /* .header 
   /* Becomes HAMBURGER */
-  .row-header {
+  header {
     display: none;
   }
   .burgerMenu {
