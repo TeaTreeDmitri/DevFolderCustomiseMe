@@ -52,14 +52,14 @@ function confirmShape() {
 
 function addCedarwoodToBasket() {
     if (document.querySelector("#iconDisplayOne").style.backgroundImage == false) {
-        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(/icons/cedarwood.svg)";
+        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(../icons/cedarwood.svg)";
         document.querySelector(".confirmChoice").href += "ingredient1=cedarwood";
         document.querySelector("body").style.backgroundImage = `linear-gradient(to bottom right, ${cedarwoodColour} , white)`;
         firstColour = cedarwoodColour;
         basket.ingredienta = "cedarwood";
     } else {
         console.log("bim bam")
-        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(/icons/cedarwood.svg)";
+        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(../icons/cedarwood.svg)";
         document.querySelector(".confirmChoice").href += "ingredient2=cedarwood";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${firstColour}, ${cedarwoodColour})`;
         basket.ingredientb = "cedarwood";
@@ -69,13 +69,13 @@ function addCedarwoodToBasket() {
 
 function addSandalwoodToBasket() {
     if (document.querySelector("#iconDisplayOne").style.backgroundImage == false) {
-        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(/icons/sandalwood.svg)";
+        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(../icons/sandalwood.svg)";
         document.querySelector(".confirmChoice").href += "ingredient1=sandalwood";
         document.querySelector("body").style.backgroundImage = `linear-gradient(to bottom right, ${sandalwoodColour} , white)`;
         firstColour = sandalwoodColour;
         basket.ingredienta = "sandalwood";
     } else {
-        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(/icons/sandalwood.svg)";
+        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(../icons/sandalwood.svg)";
         document.querySelector(".confirmChoice").href += "&ingredient2=cedarwood";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${firstColour}, ${sandalwoodColour})`;
         basket.ingredientb = "sandalwood";
@@ -84,13 +84,13 @@ function addSandalwoodToBasket() {
 
 function addBergamotToBasket() {
     if (document.querySelector("#iconDisplayOne").style.backgroundImage == false) {
-        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(/icons/bergamot.svg)";
+        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(../icons/bergamot.svg)";
         document.querySelector(".confirmChoice").href += "ingredient1=bergamot";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${bergamotColour}, white)`;
         firstColour = bergamotColour;
         basket.ingredienta = "bergamot";
     } else {
-        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(/icons/bergamot.svg)";
+        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(../icons/bergamot.svg)";
         document.querySelector(".confirmChoice").href += "&ingredient2=bergamot";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${firstColour}, ${bergamotColour})`;
         basket.ingredientb = "bergamot";
@@ -99,13 +99,13 @@ function addBergamotToBasket() {
 
 function addOrangeSweetToBasket() {
     if (document.querySelector("#iconDisplayOne").style.backgroundImage == false) {
-        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(/icons/orange.svg)";
+        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(../icons/orange.svg)";
         document.querySelector(".confirmChoice").href += "ingredient1=orange";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${orangeColour}, white)`;
         firstColour = orangeColour;
         basket.ingredienta = "orange";
     } else {
-        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(/icons/orange.svg)";
+        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(../icons/orange.svg)";
         document.querySelector(".confirmChoice").href += "&ingredient2=orange";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${firstColour}, ${orangeColour})`;
         basket.ingredientb = "orangeS";
@@ -120,7 +120,7 @@ function addRosemaryToBasket() {
         firstColour = rosemaryColour;
         basket.ingredienta = "rosemary";
     } else {
-        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(/icons/rosemary.svg)";
+        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(../icons/rosemary.svg)";
         document.querySelector(".confirmChoice").href += "&ingredient2=rosemary";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${firstColour}, ${rosemaryColour})`;
         basket.ingredientb = "rosemary";
@@ -148,13 +148,13 @@ function addCinnamonToBasket() {
 function addGingerToBasket() {
     document.querySelector(".customisegrid").classList.add("gingerColor");
     if (document.querySelector("#iconDisplayOne").style.backgroundImage == false) {
-        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(/icons/ginger.svg)";
+        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(../icons/ginger.svg)";
         document.querySelector(".confirmChoice").href += "ingredient1=ginger";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${gingercolour}, white)`;
         firstColour = gingerColour;
         basket.ingredienta = "ginger";
     } else {
-        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(/icons/ginger.svg)";
+        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(../icons/ginger.svg)";
         document.querySelector(".confirmChoice").href += "&ingredient2=ginger";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${firstColour}, ${gingerColour})`;
         basket.ingredientb = "ginger";
@@ -164,13 +164,13 @@ function addGingerToBasket() {
 function addLavenderToBasket() {
     document.querySelector(".customisegrid").classList.add("lavenderColor");
     if (document.querySelector("#iconDisplayOne").style.backgroundImage == false) {
-        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(/icons/lavender.svg)";
+        document.querySelector("#iconDisplayOne").style.backgroundImage = "url(../icons/lavender.svg)";
         document.querySelector(".confirmChoice").href += "ingredient1=lavender";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${lavenderColour}, white)`;
         firstColour = lavenderColour;
         basket.ingredienta = "lavender";
     } else {
-        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(/icons/lavender.svg)";
+        document.querySelector("#iconDisplayTwo").style.backgroundImage = "url(../icons/lavender.svg)";
         document.querySelector(".confirmChoice").href += "&ingredient2=lavender";
         document.querySelector("body").style.background = `linear-gradient(to bottom right, ${firstColour}, ${lavenderColour})`;
         basket.ingredientb = "lavender";
@@ -188,14 +188,14 @@ document.querySelector("#round").addEventListener("click", addRoundToBasket);
 function addHeartToBasket() {
     basket.shape = "heart";
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-white.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-white.png`;
     document.querySelector(".confirmChoice").href += "&shape=heart";
 }
 
 function addSquareToBasket() {
     basket.shape = "square";
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-white.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-white.png`;
     document.querySelector(".confirmChoice").href += "&shape=square";
 
 }
@@ -203,7 +203,7 @@ function addSquareToBasket() {
 function addRoundToBasket() {
     basket.shape = "round"
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-white.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-white.png`;
     document.querySelector(".confirmChoice").href += "&shape=round";
 }
 
@@ -223,62 +223,62 @@ document.querySelector("#yellow").addEventListener("click", addYellowToBasket);
 function addWhiteToBasket() {
     basket.color = "white";
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=white";
 }
 
 function addBlackToBasket() {
     basket.color = "black";
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=black";
 }
 
 function addPinkToBasket() {
     basket.color = "pink";
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=pink";
 }
 
 function addBlueToBasket() {
     basket.color = "lightBlue";
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=lightBlue";
 }
 
 function addPurpleToBasket() {
     basket.color = "purple"
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=purple";
 }
 
 function addOrangeToBasket() {
     basket.color = "orange"
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=orange";
 }
 
 function addRedToBasket() {
     basket.color = "red"
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=red";
 }
 
 function addUltramarineToBasket() {
     basket.color = "blue"
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=blue";
 }
 
 function addYellowToBasket() {
     basket.color = "yellow"
     document.querySelector("html").offsetHeight;
-    document.querySelector(".customiseSoap").src = `/productphoto/${basket.shape}-${basket.color}.png`;
+    document.querySelector(".customiseSoap").src = `../productphoto/${basket.shape}-${basket.color}.png`;
     document.querySelector(".confirmChoice").href += "&color=yellow";
 }
