@@ -7,6 +7,8 @@ const basket = {
     quantity: 4
 };
 
+const nothing = "";
+
 
 const cedarwoodColour = "hsla(36, 28%, 44%, 0.5)";
 const sandalwoodColour = "hsla(24, 76%, 24%, 0.5)";
