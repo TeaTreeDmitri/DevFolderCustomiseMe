@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="300px" height="300px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C0E8DD;}
+	.st1{fill:none;stroke:#C0E8DD;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#FAE9E7;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st4{fill:none;}
+	.st5{font-family:'ShipporiMincho-Regular';}
+	.st6{font-size:24px;}
+	.st7{letter-spacing:2;}
+	.st8{fill:none;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st9{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st10{fill:#F3A492;}
+	.st11{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<rect x="37.5" y="134.93" class="st4" width="185" height="32.55"/>
+<text transform="matrix(1 0 0 1 37.4998 152.5258)" class="st5 st6 st7">CUSTOMISE</text>
+<rect x="213.5" y="164.71" class="st4" width="49" height="27"/>
+<text transform="matrix(1 0 0 1 213.4998 182.3002)" class="st5 st6 st7">ME</text>
+<path class="st2" d="M238,192.91v56.59c0,0.28-0.22,0.5-0.5,0.5h-179c-0.27,0-0.5-0.22-0.5-0.5v-88.59"/>
+<path class="st2" d="M58,122.91V50.5c0-0.28,0.23-0.5,0.5-0.5h179c0.28,0,0.5,0.22,0.5,0.5v104.41"/>
+<polyline class="st2" points="238,195.98 238,250 58,250 58,164.71 "/>
+<polyline class="st2" points="58,122.67 58,50 238,50 238,153.94 "/>
+</svg>

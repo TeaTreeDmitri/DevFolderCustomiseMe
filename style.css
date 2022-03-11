@@ -3,6 +3,8 @@
 @import url("https://use.typekit.net/nhe2jgx.css");
 @import url("https://use.typekit.net/nhe2jgx.css");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap");
+@import url("https://use.typekit.net/nhe2jgx.css");
+@import url("https://use.typekit.net/nhe2jgx.css");
 
 :root {
   --header-font: "Shippori Mincho B1", serif;
@@ -16,16 +18,17 @@
   --p-textsize: 1rem;
   --big-bodytext: 1.5rem;
   --nav-font: "aktiv-grotesk", sans-serif;
-  --nav-fontsize: 1.5rem;
+  --nav-fontsize: 1.125rem;
   --nav-weight: 700;
   --btn-fontsize: 1.125rem;
   --btn-weight: 700;
   --btn-font: "aktiv-grotesk", sans-serif;
-  --bg-gradient: ;
   --review-card-bg: #c0e8dd;
-  --button-border: ;
   --footer-faq-bgcolor: #8cb8b7;
   --content-padding: 1rem;
+}
+html {
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
@@ -38,16 +41,158 @@ img {
 }
 a {
   text-decoration: none;
-  color: #8cb8b7;
+  color: #000000;
 }
 a:hover {
   cursor: pointer;
 }
+.hidden {
+  display: none;
+}
+
+/* **********BURGER MENU ********* */
+.burgerMenu {
+  display: none;
+}
+.burgerMenuItems {
+  position: absolute;
+  z-index: 5;
+  height: 20vh;
+  width: 20vw;
+  right: 10%;
+  opacity: 100%;
+  color: black;
+  font-family: var(--nav-font);
+  font-weight: var(--nav-weight);
+  font-size: var(--burgemenu-fontsize);
+}
+.burgerMenuItems li {
+  list-style-type: none;
+  padding-top: 1rem;
+}
+.cart li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  opacity: 80%;
+  position: fixed;
+  z-index: 4;
+}
+.burgermenuButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 3.75rem;
+}
+
+#loginbutton {
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
+  transition: all 0.35s ease;
+  color: #000;
+  border: 3px solid #000;
+  text-align: center;
+  line-height: 1;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 8px;
+}
+#loginbutton:hover {
+  color: #fff;
+  background-color: #000;
+}
+#signupbutton {
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
+  transition: all 0.35s ease;
+  color: #fff;
+  border: 3px solid #000;
+  text-align: center;
+  line-height: 1;
+  background-color: #000;
+  padding: 10px;
+  outline: none;
+  border-radius: 8px;
+}
+#signupbutton:hover {
+  color: #000;
+  background-color: white;
+}
+/* *******HEADER********* */
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+ul {
+  margin: 0;
+}
+header {
+  padding: 0.75rem;
+}
+ul a {
+  text-decoration: none;
+}
+.header-logo {
+  display: inline;
+  width: 5rem;
+}
+.navbutton {
+  border: 2px solid white;
+  border-radius: 0%;
+  padding: 0.75em;
+  background-color: transparent;
+  font-family: var(--nav-font);
+}
+
+li:first-child {
+  margin-right: auto;
+}
+/* animate the :after element's width from 0 to 100%  */
+header nav li a {
+  position: relative;
+  display: block;
+}
+header nav li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: -10%;
+}
+header nav li a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: 0.3s;
+}
+.navbutton a:hover::after {
+  width: 100%;
+  height: 0px;
+  background-color: #000;
+  transition: 0.3s;
+}
+
 /************** Base styling********** */
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--header-font);
 }
 p {
@@ -66,6 +211,10 @@ h3 {
   font-size: var(--h3-fontsize);
   font-weight: var(--h3-weight);
 }
+h4 {
+  font-size: var(--h4-fontsize);
+  font-weight: var(--h4-weight);
+}
 
 body {
   overflow-x: hidden;
@@ -82,7 +231,6 @@ nav a {
   border: 2px solid black;
   border-radius: 8px;
   padding: 0.75rem;
-  padding: 0.75rem;
   padding-bottom: 0.25rem;
   padding-top: 0.25rem;
   text-align: center;
@@ -96,6 +244,7 @@ nav a {
   font-family: var(--btn-font);
   font-weight: var(--btn-weight);
   font-size: var(--btn-fontsize);
+  z-index: 2;
 }
 
 .buttonscontainer {
@@ -104,40 +253,97 @@ nav a {
   padding-top: 1.75rem;
   gap: 1.75rem;
 }
+
 #createbutton {
-  background-color: #230a06;
-  color: #ffffff;
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
+  transition: all 0.35s ease;
+  color: #fff;
+  border: 3px solid #000;
+  text-align: center;
+  line-height: 1;
+  background-color: black;
+  padding: 1rem;
+  outline: none;
+  border-radius: 8px;
+  width: 26vw;
+}
+#createbutton:hover {
+  color: #000;
+  background-color: #fff;
+}
+#shopbutton {
+  transition: all 0.35s ease;
+  background-color: white;
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
+  z-index: 2;
+  width: 26vw;
+  line-height: 1;
+  padding: 0.75rem;
+}
+#shopbutton:hover {
+  background-color: #000;
+  color: #fff;
 }
 .header {
   text-align: center;
 }
+.landingwrap {
+  background-image: url(svgs/landingpagetextimg.jpg);
+  height: 100vh;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
 .landingtext {
   padding-top: 1.75rem;
   padding: 1rem;
-  max-width: 66vw;
+  max-width: 66ch;
   padding-left: 4.5rem;
+  max-width: 66vw;
+}
+.landingtext p {
+  width: 66ch;
+  max-width: 66vw;
+  z-index: 2;
 }
 #landingtitle {
-  padding: 1rem;
+  padding-top: 10vw;
   padding-left: 4.5rem;
-}
-.landingwrap {
-  background-color: var(--review-card-bg);
+  max-width: 66ch;
+  z-index: 2;
 }
 .stars {
   padding-top: 0.75rem;
   padding-bottom: 1.75rem;
 }
+.soaptext {
+  position: absolute;
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 250px;
+  line-height: 20vw;
+  z-index: 0;
+}
+.landingimage.bgelement {
+  z-index: -1;
+}
+
 /* *********** */
 
 /* *******HOW it works*******' */
 .hiwsection {
   padding-top: 4rem;
-  padding: 1rem;
+  padding: 1.75rem;
 }
 .hiwwrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1rem;
   justify-content: space-between;
 }
@@ -200,13 +406,17 @@ nav a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  padding: 2.75rem;
 }
 .shopgrid {
-  padding-top: 2.75rem;
-  padding: 1rem;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2.75rem;
 }
-
+.shopsection h2 {
+  text-align: center;
+}
 .shopitem {
   display: flex;
   flex-direction: column;
@@ -217,41 +427,220 @@ nav a {
 }
 .itemname {
   padding-top: 1rem;
+  padding-bottom: 1.75rem;
 }
 .price {
   padding-top: 1.5rem;
   padding-bottom: 1.25rem;
 }
 .addtocart {
-  border: solid 2px #000000;
-  padding: 1rem;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
   font-family: var(--btn-font);
-  font-size: var(--btn-fontsize);
   font-weight: var(--btn-weight);
+  font-size: var(--btn-fontsize);
+  transition: all 0.35s ease;
+  color: #fff;
+  border: 3px solid #000;
+  text-align: center;
+  line-height: 1;
+  background-color: #000;
+  padding: 1rem;
+  outline: none;
+  border-radius: 8px;
+}
+.addtocart:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+/* ****************PRODUCT LIST PAGE ******************** */
+
+.listlandingwrap {
+  background: linear-gradient(0deg, #8cb8b7, #c0e8dd 60%);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.listlandingwrap img {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.shopsection {
+  padding-top: 2.75rem;
+}
+.custombanner {
+  background-image: url(svgs/bannerimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.bannertitle {
+  text-align: center;
+  color: #000;
+}
+.bannertext {
+  padding-top: 1.75rem;
+  padding-bottom: 2.75rem;
+  text-align: center;
+  max-width: 50%;
+  color: #000;
+}
+.bannerbutton {
+  text-align: center;
+}
+
+/* ***********FOOTER*********** */
+
+footer {
+  /*  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 5rem; */
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 2.75rem;
+  padding-bottom: 1.75rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.secondfooterdiv {
+  justify-self: center;
+  display: flex;
+  gap: 2rem;
+}
+.secondfooterdiv img {
+  width: 15vw;
+}
+.logodescription {
+  max-width: 26ch;
+}
+.footer-nav-flex {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+}
+
+.footernav {
+  list-style: none;
+}
+
+.footernav li {
+  padding-top: 0.7rem;
+}
+
+.contactlist li {
+  list-style: none;
+  padding: 0.25rem;
+}
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-self: center;
+}
+
+.copyright {
+  opacity: 0.7;
+  font-size: 0.6rem;
+  text-align: center;
+  padding-top: 5rem;
 }
 
 /* media queries  */
-
+@media only screen and (min-width: 980px) {
+  .overlay {
+    display: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .burgerMenu {
+    display: block;
+    position: fixed;
+    background-image: url(/svgs/burgermenu.svg);
+    background-size: contain;
+    height: 4%;
+    width: 4%;
+    margin-top: 2%;
+    margin-left: 90%;
+    color: black;
+    z-index: 100;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 980px) {
+  /* .header 
+  /* Becomes HAMBURGER */
+  header {
+    display: none;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 799px) {
+  /* .header 
+  /* Becomes HAMBURGER */
+  header {
+    display: none;
+  }
+  .burgerMenu {
+    display: block;
+    position: fixed;
+    background-image: url(/svgs/burgermenu.svg);
+    background-size: contain;
+    height: 7.5%;
+    width: 7.5%;
+    margin-top: 2%;
+    margin-left: 85%;
+    color: black;
+    z-index: 100;
+    background-repeat: no-repeat;
+  }
+}
 @media only screen and (max-width: 899px) {
   .hiwwrap {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .buttonscontainer {
-    justify-content: flex-start;
-  }
+
   .button {
     width: 20vw;
   }
 }
 @media only screen and (max-width: 799px) {
   .hiwwrap {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .socialproof {
     grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.75rem;
+  }
+  .secondfooterdiv {
+    justify-content: center;
+    max-width: 100%;
+    text-align: center;
+  }
+  .secondfooterdiv img {
+    width: 33.3vw;
+  }
+  figcaption {
+    font-weight: 600;
+  }
+  .footer-nav-flex {
+    justify-content: center;
+  }
+  .listlandingwrap {
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
@@ -261,24 +650,31 @@ nav a {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
-  .samplegrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .buttonscontainer {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .button {
-    width: 50vw;
-  }
-}
-
-@media only screen and (max-width: 599px) {
   .buttonscontainer {
     flex-direction: column;
     justify-content: center;
   }
+  #createbutton {
+    width: 80vw;
+  }
+  #shopbutton {
+    width: 80vw;
+  }
+
+  .samplegrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .button {
+    width: 50vw;
+  }
+  .burgerMenu {
+    margin-left: 82%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
   .button {
     width: 100vw;
   }
@@ -289,5 +685,25 @@ nav a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .landingtext {
+    padding: 1.75rem;
+  }
+  .sectionheader {
+    text-align: center;
+    padding: 1rem;
+  }
+  .buttonscontainer {
+    padding-top: 10rem;
+    justify-content: center;
+  }
+  #landingtitle {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-top: 4.5rem;
+  }
+  #createbutton {
+    background-color: #000;
+    color: #fff;
   }
 }
