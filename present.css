@@ -8,6 +8,7 @@
 
 body {
     overflow-y: hidden;
+    transform: translateY(-25px);
 }
 
 h6 {
